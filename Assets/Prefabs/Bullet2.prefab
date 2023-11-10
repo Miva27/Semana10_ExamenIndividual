@@ -147,5 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
-  bulletSpeed: 80
+  bulletSpeed: 90
   bulletLifetime: 3

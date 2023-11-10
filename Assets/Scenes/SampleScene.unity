@@ -151,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 58798341}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.34, y: 0.09, z: 0.49}
+  m_LocalPosition: {x: 0.525, y: 0.181, z: 0.305}
   m_LocalScale: {x: 0.239658, y: 0.23828125, z: 1.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -345,7 +345,7 @@ Transform:
   m_GameObject: {fileID: 565528802}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 509.2, y: 363.7, z: 12.9}
+  m_LocalPosition: {x: 484.3, y: 363.7, z: -14.4}
   m_LocalScale: {x: 3.0506, y: 3.0506, z: 3.0506}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -461,6 +461,7 @@ GameObject:
   - component: {fileID: 958966774}
   - component: {fileID: 958966781}
   - component: {fileID: 958966780}
+  - component: {fileID: 958966782}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -589,15 +590,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958966773}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 495.5813, y: 363.3, z: -18.1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 421.6, y: 363.3, z: -6.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
   - {fileID: 58798342}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &958966780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,9 +612,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseDamage1: 5
-  baseDamage2: 8
-  timeBetweenShots1: 1
-  timeBetweenShots2: 2.5
+  baseDamage2: 10
+  timeBetweenShots1: 0.2
+  timeBetweenShots2: 0.5
   Bullet1: {fileID: 3288600108397100227, guid: fc7dd6d0600fc8e49bed2867642a12b4, type: 3}
   Bullet2: {fileID: 3288600108397100227, guid: 5e3bf2f65c65b1744b4f047fd70542c4, type: 3}
   BulletPoint1: {fileID: 1856635051}
@@ -631,6 +632,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootKeycode: 323
+--- !u!114 &958966782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958966773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4b4357b5ba1f744953dc56a9bb03bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
+  gameManager: {fileID: 1695343782}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +772,7 @@ MonoBehaviour:
   BossDeath: 0
   currentHealth: 0
   Player: {fileID: 958966773}
-  BossPrefab: {fileID: 0}
+  BossPrefab: {fileID: 323060626730581620, guid: aa2ac1ba2d101b346a201d7db756df63, type: 3}
 --- !u!4 &1695343783
 Transform:
   m_ObjectHideFlags: 0
@@ -943,9 +958,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jugador: {fileID: 958966773}
   balaPrefab: {fileID: 1400378209022899390, guid: 4e7339c6e5c8f9a4cb50691175fb2f92, type: 3}
-  currentHealth: 20
-  velocidadDisparo: 18
-  tiempoEntreDisparos: 4
+  currentHealth: 50
+  velocidadDisparo: 75
+  tiempoEntreDisparos: 2
   gameManager: {fileID: 1695343782}
 --- !u!65 &1991734904
 BoxCollider:
@@ -1027,7 +1042,7 @@ Transform:
   m_GameObject: {fileID: 1991734902}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 487.4, y: 363.7, z: 17.7}
+  m_LocalPosition: {x: 455.1, y: 363.7, z: 0.4}
   m_LocalScale: {x: 3.0506, y: 3.0506, z: 3.0506}
   m_ConstrainProportionsScale: 0
   m_Children: []
