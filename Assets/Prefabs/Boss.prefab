@@ -123,7 +123,7 @@ MonoBehaviour:
   currentHealth: 80
   damageToPlayer: 20
   moveSpeed: 5
-  ShootVelocity: 90
+  ShootVelocity: 100
   timeBetweenShots: 2
   Bullet: {fileID: 1400378209022899390, guid: 4e7339c6e5c8f9a4cb50691175fb2f92, type: 3}
   Player: {fileID: 0}
